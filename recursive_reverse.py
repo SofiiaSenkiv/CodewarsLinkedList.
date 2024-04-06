@@ -5,6 +5,8 @@ class Node(object):
 
 def reverse(head):
     # your code goes here.
+    if head is None or head.next is None:
+        return head
     reversed_list_head = reverse(head.next)
     head.next.next = head
     head.next = None
