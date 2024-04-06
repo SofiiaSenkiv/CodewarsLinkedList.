@@ -11,6 +11,8 @@ class Context(object):
 def alternating_split(head):
     # Your code goes here.
     # Remember to return the context.
+    if head is None or head.next is None:
+        raise ValueError("Input list must contain at least two nodes")
     first_head = head
     second_head = head.next
     first_current = first_head
