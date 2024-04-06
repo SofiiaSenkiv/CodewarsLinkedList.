@@ -7,6 +7,8 @@ def remove_duplicates(head):
     # Your code goes here.
     # Remember to return the head of the list.
     current = head
+    if current is None or current.next is None:
+        return head
     while current.next:
         if current.data == current.next.data:
             current.next = current.next.next
